@@ -5,7 +5,7 @@ const secondsElement = document.querySelector("#second");
 
 let countDown = () => {
   // 1.calculate date
-  let countDate = new Date("August 08,2024 08:08:08").getTime();
+  let countDate = new Date("November 11,2023 11:11:11").getTime();
   let now = new Date().getTime();
   let gap = countDate - now;
 
