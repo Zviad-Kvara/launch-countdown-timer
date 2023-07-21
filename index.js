@@ -5,17 +5,17 @@ const secondsElement = document.querySelector("#second");
 
 let countDown = () => {
   // 1.calculate date
-  let countDate = new Date("July 21,2023 20:50:50").getTime();
+  let countDate = new Date("August 08,2024 08:08:08").getTime();
   let now = new Date().getTime();
   let gap = countDate - now;
 
-  //2.time claculation in miliseconds for each element
+  //2.time claculation in milliseconds for each element
   let second = 1000;
   let minute = 60 * second;
   let hour = 60 * minute;
   let day = 24 * hour;
 
-  //3.counting date in miliseconds
+  //3.counting date in milliseconds
   const countDays = Math.floor(gap / day);
   const countHours = Math.floor((gap % day) / hour);
   const countMinutes = Math.floor((gap % hour) / minute);
