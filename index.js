@@ -4,36 +4,41 @@ const minutesElement = document.querySelector("#minute");
 const secondsElement = document.querySelector("#second");
 
 let countDown = () => {
-  let countDate = new Date("July 20,2023 00:00:00").getTime();
+  // 1.calculate date
+  let countDate = new Date("July 21,2023 20:50:50").getTime();
   let now = new Date().getTime();
   let gap = countDate - now;
 
-  //time claculation
+  //2.time claculation in miliseconds for each element
   let second = 1000;
   let minute = 60 * second;
   let hour = 60 * minute;
   let day = 24 * hour;
 
-  //counting date
+  //3.counting date in miliseconds
   const countDays = Math.floor(gap / day);
   const countHours = Math.floor((gap % day) / hour);
   const countMinutes = Math.floor((gap % hour) / minute);
   const countSeconds = Math.floor((gap % minute) / second);
-  // changing dates innerText
+
+  // 4.changing dates innerText
   daysElement.innerText = countDays;
   hoursElement.innerText = countHours;
   minutesElement.innerText = countMinutes;
   secondsElement.innerText = countSeconds;
-// when time ends
+  // 5.when time ends date will become 0
   if (
-    countDays === 0 &&
-    countHours === 0 &&
-    countMinutes === 0 &&
-    countSeconds === 0
+    countDays <= 0 &&
+    countHours <= 0 &&
+    countMinutes <= 0 &&
+    countSeconds <= 0
   ) {
     clearInterval(interval);
-    console.log("EXPIRED");
+    daysElement.innerText = 0;
+    hoursElement.innerText = 0;
+    minutesElement.innerText = 0;
+    secondsElement.innerText = 0;
   }
 };
-// setting interval to countDown
+// set interval to countDown
 let interval = setInterval(countDown, 1000);

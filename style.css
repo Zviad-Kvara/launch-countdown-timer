@@ -111,43 +111,61 @@ main {
 }
 /* -------------------------Desktop Version----------------------------- */
 @media screen and (min-width: 1440px) {
-  body {
-    
-  }
-  main {
-    
-  }
   .launch-txt {
-    
+    min-width: 439px;
+    font-size: 22px;
+    margin-top: 132px;
+    letter-spacing: 7.5px;
+    line-height: 29.11px;
   }
   .container {
-   
+    margin-top: 104px;
+    gap: 32px;
   }
-  .days {
+  .days,
+  .hours,
+  .minutes,
+  .seconds {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .box {
-    color: #fb5e84;
-    text-align: center;
-    font-size: 36px;
-    line-height: 71px;
-    letter-spacing: -1.08px;
-    background-image: url("./images/box.svg");
-    position: relative;
+    background-image: url("./images/desktop-box-img.svg");
+    border-radius: 8px;
+    width: 148px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .right-oval {
+    width: 12px;
+    height: 12px;
     position: absolute;
     right: 0;
     bottom: 46%;
   }
   .left-oval {
+    width: 12px;
+    height: 12px;
     position: absolute;
     left: 0;
     bottom: 46%;
   }
   .rectangle {
+    width: 148px;
     position: absolute;
     bottom: 49%;
     right: 0;
+  }
+  #day,
+  #hour,
+  #minute,
+  #second {
+    text-align: center;
+    font-size: 80px;
+    letter-spacing: -2.4px;
   }
   .container-txt {
     color: #8385a9;
@@ -156,23 +174,8 @@ main {
     letter-spacing: 2.959px;
     width: 70px;
   }
-
-  .box-img {
-  }
-  .hours {
-  }
-  .minutes {
-  }
-  .seconds {
-  }
-  footer {
-  }
   .icons {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 48px;
+    gap: 40px;
+    padding-bottom: 80px;
   }
 }
